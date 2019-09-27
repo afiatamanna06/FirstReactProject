@@ -13,7 +13,7 @@ class Counter extends Component {
         this.handleIncrement = this.handleIncrement.bind(this);
     }*/
     handleIncrement = () => {
-        console.log("Increment clicked!",this);
+        this.setState({ count: this.state.count + 1});
     }
     /*renderTags() {
         if(this.state.tags.length === 0) return <p>There are no tags!</p>;
