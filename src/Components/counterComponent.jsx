@@ -8,8 +8,12 @@ class Counter extends Component {
         fontSize: 10,
         fontWeight: "bold"
     };
-    handleIncrement() {
-        console.log("Increment clicked!");
+    /*constructor() {
+        super();
+        this.handleIncrement = this.handleIncrement.bind(this);
+    }*/
+    handleIncrement = () => {
+        console.log("Increment clicked!",this);
     }
     /*renderTags() {
         if(this.state.tags.length === 0) return <p>There are no tags!</p>;
