@@ -31,7 +31,8 @@ class App extends Component {
         this.setState({ counters });
     };
     render() {
-        return ( < React.Fragment > < NavBar / > < main className = "container" > < Counters counters = { this.state.counters }
+        return ( < React.Fragment > < NavBar totalCounters = { this.state.counters.filter(c => c.value > 0).length }
+            / > < main className = "container" > < Counters counters = { this.state.counters }
             onReset = { this.handleReset }
             onIncrement = { this.handleIncrement }
             onDelete = { this.handleDelete }
